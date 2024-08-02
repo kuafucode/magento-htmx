@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="hx-boost" value="true"/>
+        <attribute name="hx-select" value="main"/>
+        <attribute name="hx-target" value="main"/>
+        <attribute name="hx-swap" value="transition:true"/>
+        <referenceBlock name="breadcrumbs" template="Kuafu_Htmx::html/breadcrumbs.phtml" />
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="htmx.body.swapclass" template="Kuafu_Htmx::html/swapclass.phtml" />
+        </referenceContainer>
+    </body>
+</page>
