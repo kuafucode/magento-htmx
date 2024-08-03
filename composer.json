@@ -1,0 +1,16 @@
+{
+    "name": "kuafu/htmx",
+    "description": "Turn your traditional magento store into blazing fast SPA instantly",
+    "type": "magento2-module",
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Kuafu\\Htmx\\": ""
+        }
+    }
+}

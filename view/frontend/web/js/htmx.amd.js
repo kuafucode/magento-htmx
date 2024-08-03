@@ -1,3 +1,4 @@
+define(() => {
 var htmx = (function() {
   'use strict'
 
@@ -4879,7 +4880,7 @@ var htmx = (function() {
   function ready(fn) {
     // Checking readyState here is a failsafe in case the htmx script tag entered the DOM by
     // some means other than the initial page load.
-    if (isReady || getDocument().readyState === 'complete') {
+    if (isReady || getDocument().readyState === 'interactive' || getDocument().readyState === 'complete') {
       fn()
     } else {
       getDocument().addEventListener('DOMContentLoaded', fn)
@@ -5130,3 +5131,5 @@ var htmx = (function() {
  * @property {(swapStyle: HtmxSwapStyle, target: Element, fragment: Node, settleInfo: HtmxSettleInfo) => boolean} handleSwap
  * @property {(xhr: XMLHttpRequest, parameters: FormData, elt: Element) => *|string|null} encodeParameters
  */
+return htmx
+})
