@@ -15,10 +15,6 @@ define([
 
         $.mage.init();
 
-        var messages = $.cookieStorage.get('mage-messages');
-        if (!_.isEmpty(messages)) {
-            customerData.set('messages', {messages: messages});
-            $.cookieStorage.set('mage-messages', '');
-        }
+        $('.messages').applyBindings()
     });
 })
